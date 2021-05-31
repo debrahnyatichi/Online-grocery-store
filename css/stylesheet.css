@@ -27,6 +27,10 @@ html{
     scroll-behavior: smooth;
 }
 
+section{
+    padding: 2rem 9%;
+}
+
 .header-1{
     background: #eee;
     display: flex;
@@ -76,12 +80,6 @@ html{
     background: var(--black);
 }
 
-.header-2 .active{
-    position: fixed;
-    top: 0; left: 0; right: 0;
-    z-index: 10000;
-}
-
 .header-2{
     background: #fff;
     display: flex;
@@ -92,6 +90,11 @@ html{
     position: relative;
 }
 
+.header-2 .active{
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 10000;
+}
 .header-2 .navbar a{
     padding: .5rem 1.5rem;
     font-size: 2rem;
@@ -124,9 +127,50 @@ html{
     display: none;
 }
 
-body{
-    height: 200rem;
+.home{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
 }
+
+.home .image{
+    flex: 1 1 40rem;
+    padding-top: 5rem;
+}
+
+.home .image img{
+    width: 100%;
+}
+
+.home .content{
+    flex: 1 1 40rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 @media(max-width:1200px){
     html{
         font-size: 55%;
