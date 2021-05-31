@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,300;0,400;0,600;0,700;1,200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;600;700&display=swap');
 
 :root{
 --green:#27ae60;
@@ -54,7 +54,7 @@ html{
 .header-1 .search-box-container #search-box{
     height: 100%;
     width: 100%;
-    padding: .1rem;
+    padding: 1rem;
     font-size: 2rem;
     color: #333;
     border: 1rem solid rgba(0,0,0,.3);
@@ -76,6 +76,12 @@ html{
     background: var(--black);
 }
 
+.header-2 .active{
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 10000;
+}
+
 .header-2{
     background: #fff;
     display: flex;
@@ -86,29 +92,24 @@ html{
     position: relative;
 }
 
-.header-2.active{
-    position: fixed;
-    top: 0; left: 0 right:0;
-    z-index: 10000;
-}
-
 .header-2 .navbar a{
- padding: 5rem 1.5rem;
- font-size: 2rem;
- border-radius: 5rem;
- color:var(--black);
+    padding: .5rem 1.5rem;
+    font-size: 2rem;
+    border-radius: .5rem;
+    color: var(--black);
 }
 
-.header-2 navbar a:hover{
- background:var(--green);
- color: #fff;
+.header-2 .navbar a:hover{
+    background: var(--green);
+    color: #fff;
 }
 
 .header-2 .icons a{
     font-size: 2.5rem;
     color: var(--black);
-    padding-left: 5rem;
+    padding-left: 1rem;
 }
+
 .header-2 .icons a:hover{
     color: var(--green);
 }
@@ -134,7 +135,7 @@ body{
 
 @media(max-width:991px){
     
-    .header-1
+    .header-1,
     .header-2{
         padding: 2rem;
     }
@@ -146,38 +147,47 @@ body{
     }
 }
 
+@media(max-width:450px){
+    html{
+        font-size: 50%;
+    }
 .header-2 .navbar{
     position: absolute;
     top: 100%; left: 0; right: 0;
     background: var(--black);
-    padding: 1rem 0;
+    padding: 1rem 2rem;
     display: none;
 }
 
+.header-2 .navbar .active{
+    display: initial;
+}
+
 .header-2 .navbar a{
-  font-size: 2.5rem;
-  display: block;
-  text-align: center;
-  background: #fff;
-  padding: 1rem;
-  margin: 1.5rem 0;
+    font-size: 2.5rem;
+    display: block;
+    text-align: center;
+    background: #fff;
+    padding: 1rem;
+    margin: 1.5rem 0;
+}
+
 }
 
 @media(max-width:450px){
     html{
         font-size: 50%;
     }
-}
 
-.header-1{
-    flex-flow: column;
-}
+    .header-1{
+        flex-flow: column;
+    }
 
-.header-1 .search-box-container{
-    width: 100%;
-    margin-top: 2rem;
-}
-
-.logo{
-   font-size: 4rem;
+    .header-1 .search-box-container{
+        width: 100%;
+        margin-top: 2rem;
+    }
+    .logo{
+        font-size: 4rem;
+    }
 }
